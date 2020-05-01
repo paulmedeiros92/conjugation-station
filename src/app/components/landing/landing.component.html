@@ -1,0 +1,13 @@
+<form [formGroup]="quizForm" (ngSubmit)="onSubmit(quizForm.value)">
+  <div class="options">
+    <options class="card-wrapper" [formGroup]="quizForm.get('pronouns')" title="PRONOUNS"></options>
+    <options class="card-wrapper" [formGroup]="quizForm.get('types')" title="VERBS"></options>
+    <options class="card-wrapper" [formGroup]="quizForm.get('tenses')" title="TENSES"></options>
+  </div>
+  <button mat-raised-button
+    color="accent"
+    class="start-button"
+    type="submit">
+    Start
+  </button>
+</form>

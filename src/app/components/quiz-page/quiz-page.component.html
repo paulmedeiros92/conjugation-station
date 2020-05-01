@@ -1,0 +1,24 @@
+<form [formGroup]="answerForm" (ngSubmit)="onSubmit(answerForm.value)">
+  <mat-card class="card" *ngFor="let question of questions">
+    <mat-card-header>
+      <mat-card-title>{{ cardTitle(question.verb.name, question.tense) }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content [formGroup]="answerForm.get(cardTitle(question.verb.name, question.tense))">
+      <mat-grid-list cols="2" rowHeight="6rem">
+        <mat-grid-tile
+          *ngFor="let pronoun of question.pronouns"
+          colspan="1"
+          rowspan="1">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ pronoun }}</mat-label>
+            <input
+            matInput
+            (placeholder)="pronoun"
+            [formControlName]="pronoun"> 
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</form>
+

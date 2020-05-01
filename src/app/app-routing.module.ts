@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
+import { QuizPageComponent } from './components/quiz-page/quiz-page.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: LandingComponent},
+  {path: 'quiz', component: QuizPageComponent},
 ];
 
 @NgModule({

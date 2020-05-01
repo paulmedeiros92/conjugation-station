@@ -11,12 +11,18 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ReactiveFormsModule } from '@angular/forms';
-import { OptionsComponent } from './components/options/options.component'
+import { OptionsComponent } from './components/options/options.component';
+import { QuizPageComponent } from './components/quiz-page/quiz-page.component';
+import { LandingComponent } from './components/landing/landing.component'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OptionsComponent
+    OptionsComponent,
+    QuizPageComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,8 @@ import { OptionsComponent } from './components/options/options.component'
     MatListModule,
     MatButtonModule,
     MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

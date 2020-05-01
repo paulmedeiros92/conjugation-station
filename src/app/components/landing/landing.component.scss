@@ -1,0 +1,13 @@
+.options {
+  display: flex;
+  .card-wrapper {
+    flex-grow: 1;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+  }
+}
+
+.start-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
